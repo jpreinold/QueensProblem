@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Queens Problem</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="solution.js"></script>
+	<script src="population.js"></script>
+
+	<style>
+		body {
+			margin: 10px;
+			padding: 0;
+			overflow: hidden;
+		}
+		canvas {
+			margin-left: 10%;
+			margin-top:15px;
+		}
+		.inputs {
+			text-align: center;
+			margin-top: 30px;
+		}
+		label {
+			margin-right: 5px;
+		}
+
+		#numQueens {
+			width:35px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="inputs">
+		<label for="numQueens">Number of Queens:</label>
+		<input type="number" id="numQueens" name="numQueens" min="4" max="20" />
+		<br /><br />
+		<label for="populationSize">Population Size:</label>
+		<input type="text" id="populationSize" name="popSize" />
+		<br /><br /><label for="mutationRate">Mutation Rate:</label>
+		<input type="text" id="mutationRate" name="mutationRate" />
+		<br /><br />
+		<label for="bgColor">Background Color:</label>
+		<input type="color" id="bgColor" />
+		<br /><br />
+		<label for="queenColor">Queen Color:</label>
+		<input type="color" id="queenColor" />
+		<br /> <br />
+		<input type="submit" onclick="run()" value="Run">
+	</div>
+	<script src="sketch.js"></script>
+</body>
+</html>
